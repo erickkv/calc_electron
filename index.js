@@ -87,7 +87,6 @@ function calcular(operacion) {
     let valorActual = parseInt(actual.innerHTML);
     let valorResultado = parseInt(resultado.innerHTML);
     let operador;
-    let log;
     if (operacion === 'suma') {
         resultado.innerHTML = valorResultado + valorActual;
         operador = '+';
@@ -126,6 +125,7 @@ function clickDel() {
 function clickClear() {
     actual.innerHTML = '0';
     resultado.innerHTML = '0';
+    cola = undefined;
 }
 
 function agregarLog(v1, v2, operador) {
@@ -152,5 +152,7 @@ Mousetrap.bind('-', () => operar("resta"));
 Mousetrap.bind('*', () => operar("mult"));
 Mousetrap.bind('/', () => operar("div"));
 Mousetrap.bind('=', clickIgual);
+//tecla return da problema despues de hacer CLEAR, el cual no lo da la función clickIgual con "=" o el boton "="
+//ha de ser problema de mousetrap
 Mousetrap.bind('return', clickIgual);
 Mousetrap.bind('backspace', clickDel);
