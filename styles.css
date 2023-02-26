@@ -34,3 +34,17 @@
     font-style: italic;
     background-color: #d8d2d2;
 }
+
+#secciones {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#logs {
+    height: 80%;
+    width: 80%;
+    text-align: left;
+    border: 2px solid #030330;
+    margin: 3px;
+    padding: 3px;
+}

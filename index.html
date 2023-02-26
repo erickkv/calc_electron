@@ -5,34 +5,39 @@
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <div id="calculadora">
-            <div id="resultado">0</div>
-            <div id="actual">0</div>
-            <div id="botones" class="grid-container">
-                <div></div>
-                <div></div>
-                <button class="botonOp" id="botonClear">AC</button>
-                <button class="botonOp" id="botonDel">DEL</button>
-                <button class="botonCalc" id="botonUno">1</button>
-                <button class="botonCalc" id="botonDos">2</button>
-                <button class="botonCalc" id="botonTres">3</button>
-                <button class="botonOp" id="botonSuma">+</button>
-                <button class="botonCalc" id="botonCuatro">4</button>
-                <button class="botonCalc" id="botonCinco">5</button>
-                <button class="botonCalc" id="botonSeis">6</button>
-                <button class="botonOp" id="botonResta">-</button>
-                <button class="botonCalc" id="botonSiete">7</button>
-                <button class="botonCalc" id="botonOcho">8</button>
-                <button class="botonCalc" id="botonNueve">9</button>
-                <button class="botonOp" id="botonDiv">/</button>
-                <div></div>
-                <button class="botonCalc" id="botonCero">0</button>
-                <div></div>
-                <button class="botonOp" id="botonMul">x</button>
-                <div></div>
-                <div></div>
-                <div></div>
-                <button class="botonOp" id="botonIgual">=</button>
+        <div id="secciones">
+            <div id="s1">
+                <textarea id="logs">historial</textarea>
+            </div>
+            <div id="calculadora">
+                <div id="resultado">0</div>
+                <div id="actual">0</div>
+                <div id="botones" class="grid-container">
+                    <div></div>
+                    <div></div>
+                    <button class="botonOp" id="botonClear">AC</button>
+                    <button class="botonOp" id="botonDel">DEL</button>
+                    <button class="botonCalc" id="botonUno">1</button>
+                    <button class="botonCalc" id="botonDos">2</button>
+                    <button class="botonCalc" id="botonTres">3</button>
+                    <button class="botonOp" id="botonSuma">+</button>
+                    <button class="botonCalc" id="botonCuatro">4</button>
+                    <button class="botonCalc" id="botonCinco">5</button>
+                    <button class="botonCalc" id="botonSeis">6</button>
+                    <button class="botonOp" id="botonResta">-</button>
+                    <button class="botonCalc" id="botonSiete">7</button>
+                    <button class="botonCalc" id="botonOcho">8</button>
+                    <button class="botonCalc" id="botonNueve">9</button>
+                    <button class="botonOp" id="botonDiv">/</button>
+                    <div></div>
+                    <button class="botonCalc" id="botonCero">0</button>
+                    <div></div>
+                    <button class="botonOp" id="botonMul">x</button>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <button class="botonOp" id="botonIgual">=</button>
+                </div>
             </div>
         </div>
         <script src="/path/to/mousetrap.min.js"></script>

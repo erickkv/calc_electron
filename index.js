@@ -20,6 +20,7 @@ let botonMul = document.getElementById("botonMul");
 let botonDel = document.getElementById("botonDel");
 let botonClear = document.getElementById("botonClear")
 let botonIgual = document.getElementById("botonIgual")
+let logs = document.getElementById("logs")
 
 
 botonUno.addEventListener('click', () => {actual.innerHTML += '1'; gestionarCero()});
@@ -52,8 +53,7 @@ function gestionarCero() {
     }
 }
 
-// se apacha una operacion y se llama la función que va a llamar o agregar a la cola
-
+// se selecciona una operacion y se llama la función que va a llamar o agregar a la cola
 function operar(operacion) {
     let valorActual = parseInt(actual.innerHTML);
     let valorResultado = parseInt(resultado.innerHTML);
@@ -86,14 +86,24 @@ function clickIgual () {
 function calcular(operacion) {
     let valorActual = parseInt(actual.innerHTML);
     let valorResultado = parseInt(resultado.innerHTML);
+    let operador;
+    let log;
     if (operacion === 'suma') {
-        resultado.innerHTML = valorActual + valorResultado;
+        resultado.innerHTML = valorResultado + valorActual;
+        operador = '+';
+        agregarLog(valorResultado, valorActual, operador);
     } else if (operacion === 'resta') {
         resultado.innerHTML = valorResultado - valorActual;
+        operador = '-';
+        agregarLog(valorResultado, valorActual, operador);
     } else if (operacion === 'mult') {
         resultado.innerHTML = valorResultado * valorActual;
+        operador = 'x';
+        agregarLog(valorResultado, valorActual, operador);
     } else if (operacion === 'div') {
         resultado.innerHTML = valorResultado / valorActual;
+        operador = '/';
+        agregarLog(valorResultado, valorActual, operador);
     }
     actual.innerHTML = '0';
     return;
@@ -116,6 +126,15 @@ function clickDel() {
 function clickClear() {
     actual.innerHTML = '0';
     resultado.innerHTML = '0';
+}
+
+function agregarLog(v1, v2, operador) {
+    let historial = logs.innerHTML
+    if (historial === "historial") {
+        logs.innerHTML = `${v1} ${operador} ${v2} \r\n`;
+    } else {
+        logs.innerHTML += `${v1} ${operador} ${v2} \r\n`;
+    }
 }
 
 Mousetrap.bind('1', () => {actual.innerHTML += '1'; gestionarCero()});
