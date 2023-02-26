@@ -1,0 +1,36 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+}
+
+#resultado {
+    text-align: right;
+    border: 2px solid #0000ff;
+    border-radius: 10%;
+    margin: 3px;
+    padding: 3px;
+}
+
+#actual {
+    text-align: right;
+    border: 2px solid #383030;
+    border-radius: 10%;
+    margin: 3px;
+    padding: 3px;
+}
+
+.botonCalc {
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #ffffff;
+    color: #0000ff;
+}
+
+.botonOp {
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #d8d2d2;
+}
