@@ -118,7 +118,6 @@ function clickClear() {
     resultado.innerHTML = '0';
 }
 
-//no funciona el mousetrap no sé por qué
 Mousetrap.bind('1', () => {actual.innerHTML += '1'; gestionarCero()});
 Mousetrap.bind('2', () => {actual.innerHTML += '2'; gestionarCero()});
 Mousetrap.bind('3', () => {actual.innerHTML += '3'; gestionarCero()});
